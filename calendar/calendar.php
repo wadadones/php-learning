@@ -1,7 +1,9 @@
 <?php
 // https://www.php.net/manual/ja/function.date.php
 $year = date("Y"); //西暦
-$month = date("n", mktime(0,0,0,$_GET["month"]+1,0,$year)); //月
+
+
+$month = date("n", mktime(0, 0, 0, $_GET["month"]+1, 0, $year)); //月
 
 // https://www.php.net/manual/ja/function.date.php
 $last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
