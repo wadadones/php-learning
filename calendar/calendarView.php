@@ -9,9 +9,9 @@
 <body>
   <? include("./calendar.php") ?>
   <p>
-    <a href="calendarView.php?month=<?echo $month-1?>">←</a>
+    <a href="calendarView.php?year=<?echo $prev_year?>&month=<?echo $prev_month?>">←</a>
     <? echo $year; ?>年<?php echo $month; ?>月のカレンダー
-    <a href="calendarView.php?month=<?echo $month+1?>">→</a>
+    <a href="calendarView.php?year=<?echo $next_year?>&month=<?echo $next_month?>">→</a>
   </p>
   <table>
     <tr>
