@@ -81,7 +81,3 @@ function getPrevYearValue($year, $month){
   }
   return $year;
 }
-
-function getWeekList() {
-
-}
