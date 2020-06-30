@@ -1,0 +1,25 @@
+{
+    "name": "koyhoge/php-ncmb",
+    "description": "PHP SDK for NIFTY Cloud mobile backend (NCMB)",
+    "version": "0.1.1",
+    "license": "MIT",
+    "authors": [
+	{
+	    "name": "KOYAMA Tetsuji",
+	    "email": "koyama@hoge.org",
+	    "homepage": "http://koyhogetech.hatenablog.com/"
+	}
+    ],
+
+    "require": {
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ncmb\\": "src/Ncmb"
+        }
+    }
+}

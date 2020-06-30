@@ -9,33 +9,27 @@
 <body>
   <? include("./calendar.php") ?>
   <p>
-    <a href="calendarView.php?year=<?echo $prev_year?>&month=<?echo $prev_month?>">←</a>
+    <a href="calendarView.php?year=<?echo getPrevYearValue($year, $month)?>&month=<?echo getPrevMonthValue($month)?>">←</a>
     <? echo $year; ?>年<?php echo $month; ?>月のカレンダー
-    <a href="calendarView.php?year=<?echo $next_year?>&month=<?echo $next_month?>">→</a>
+    <a href="calendarView.php?year=<?echo  getNextYearValue($year, $month)?>&month=<?echo getNextMonthValue($month)?>">→</a>
   </p>
   <table>
     <tr>
-      <th>日</th>
-      <th>月</th>
-      <th>火</th>
-      <th>水</th>
-      <th>木</th>
-      <th>金</th>
-      <th>土</th>
+      <? foreach($weekList as $weekday): ?>
+        <th><? echo $weekday ?></th>
+      <? endforeach ?>
     </tr>
     <tr>
       <!--  :で?phpを跨いでforでつなげる -->
       <? $cnt = 0 ?>
-      
       <? foreach($calendar as $key => $value): ?>
-        <td><? echo $value["day"] ?></td>
+        <td class="day"><? echo $value ?></td>
         <? $cnt++; ?>
         <? if ($cnt == 7): ?>
           </tr>
           <tr>
           <? $cnt = 0 ?>
         <? endif ?>
-        
       <? endforeach ?>
 
     </tr>

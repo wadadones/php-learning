@@ -1,0 +1,12 @@
+{
+    "name": "naoto/calendar",
+    "authors": [
+        {
+            "name": "wadadones",
+            "email": "jones3429@outlook.jp"
+        }
+    ],
+    "require": {
+        "ncmbmania/php-ncmb": "*"
+    }
+}

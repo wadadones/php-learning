@@ -1,5 +1,5 @@
 * {
-  color: #555;
+  color: #666;
 }
 
 body {
@@ -12,6 +12,14 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.day {
+  transition: background-color 0.15s linear;
+}
+
+.day:hover {
+  background: #dddddd;
 }
 
 table {
