@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ Route::resource('book', 'BookController');
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', 'HomeController@home');
