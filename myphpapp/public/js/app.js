@@ -19377,7 +19377,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 var dateInput = document.getElementById("date-input");
 var days = document.getElementsByClassName("day");
-var form = document.getElementsByTagName("form");
+var form = document.getElementsByTagName("form")[0];
 document.addEventListener("DOMContentLoaded", function () {
   alert('sample');
   console.log("sample");
@@ -19385,7 +19385,7 @@ document.addEventListener("DOMContentLoaded", function () {
 [].slice.call(days).forEach(function (day) {
   day.addEventListener("click", function () {
     dateInput.value = day.innerText;
-    form.path = "/submit/" + day.innerText;
+    form.action = "/submit/" + day.innerText;
   });
 });
 document.addEventListener("DOMContentLoaded", function () {});

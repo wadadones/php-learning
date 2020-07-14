@@ -38,7 +38,7 @@
       </tbody>
     </table>
   
-    <form>
+    <form action="/submit">
       <div class="form-group">
         <label for="date-input">Date</label>
         <input type="email" class="form-control" id="date-input" disabled>

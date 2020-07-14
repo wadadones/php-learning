@@ -1,6 +1,6 @@
 let dateInput = document.getElementById("date-input");
 let days = document.getElementsByClassName("day");
-let form = document.getElementsByTagName("form");
+let form = document.getElementsByTagName("form")[0];
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 [].slice.call(days).forEach(day => {
   day.addEventListener("click", function() {
     dateInput.value = day.innerText;
-    form.path = "/submit/" + day.innerText;
+    form.action = "/submit/" + day.innerText;
   });
 });
 
