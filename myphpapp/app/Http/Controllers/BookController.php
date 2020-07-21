@@ -16,7 +16,7 @@ class BookController extends Controller
 
     public function edit($id) {
         $book = Book::findOrFail($id);
-        eval(\Psy\sh());
+        // eval(\Psy\sh());
         return view("book/edit", compact("book"));
     }
 

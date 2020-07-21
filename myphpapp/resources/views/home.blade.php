@@ -23,7 +23,7 @@
         <tr>
         @endif
           <td
-            @if ($date->month != $currentMonth)
+          @if ($date->month != $currentMonth)
             class="bg-secondary"
             @else
             class="day"
@@ -38,15 +38,25 @@
       </tbody>
     </table>
   
-    <form action="/submit" method="post">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+        </div>
+    @endif
+    <form action="/notification" method="post">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
         <label for="date-input">Date</label>
-        <input type="text" class="form-control" id="date-input" disabled>
+        <input type="text" name="date" class="form-control" id="date-input" value="{{ $notification->date }}">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="name-input">Name</label>
-        <input type="text" class="form-control" id="name-input" placeholder="Name">
+        <input type="text" name="name" class="form-control" id="name-input" value="{{ $notification->name }}" placeholder="Name">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

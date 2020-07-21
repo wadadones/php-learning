@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Notification;
 
 class HomeController extends Controller
 {
     public function home() {
         $month = 7;
         $dates = $this->getCalendarDates(2020, $month);
-        return view('home', ['dates' => $dates, 'currentMonth' => $month]);
+        $notification = new Notification();
+        return view('home', ['dates' => $dates, 'currentMonth' => $month, 'notification' => $notification]);
     }
 
     private function getCalendarDates($year, $month) {

@@ -10,11 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 [].slice.call(days).forEach(day => {
   day.addEventListener("click", function() {
-    dateInput.value = day.innerText;
-    form.action = "/submit/" + day.innerText;
+    dateInput.value = "2020-07-" + ("00" + day.innerText).slice(-2);
+    // form.action = "/submit/" + day.innerText;
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  
-});
